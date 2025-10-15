@@ -1,0 +1,7 @@
+services:
+  app:
+   image: alpine
+   volumes:
+    - type: bind
+      source: '; touch /tmp/pwned'
+      target: /app
