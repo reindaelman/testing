@@ -1,6 +1,6 @@
 services:
   coolify:
-    container_name: coolify
+    container_name: test
     image: alpine
     volumes:
       -
